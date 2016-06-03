@@ -1,0 +1,7 @@
+.idea/*
+*.codekit
+sources/*
+
+artiste.sublime-workspace
+
+artiste.sublime-project

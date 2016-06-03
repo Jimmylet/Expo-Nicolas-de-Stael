@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="fr" lang="fr">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+        <title>Nicolas De Staël - Liens</title>
+        <link rel="stylesheet" href="css/style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <!--[if lt IE 9]>
+        <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+    </head>
+    <body class="liens">
+        <h1 role="heading" aria-level="1">Nicolas De Staël - Pratique</h1>
+        <header class="header_nav">
+                    <div class="logo">
+                        <a href="index.html" class="active">
+                            <span class="firstname">
+                                <span class="letter1">N</span>icolas
+                            </span>
+                            <br/>
+                            <span class="lastname1">
+                                <span class="letter1">D</span>e
+                            </span>
+                            <span class="lastname2">
+                                Staël
+                            </span>
+                        </a>
+                    </div>
+                <nav>
+                    <h2 role="heading" aria-level="2">Navigation</h2>
+                    <input type="checkbox" id="toggle-nav">
+                    <label for="toggle-nav" class="menu-icon">
+                        <span></span>
+                        <svg viewBox="0 0 54 54" height="54px" width="54px" y="0" x="0">
+                            <path d="M16.500,27.000 C16.500,27.000 24.939,27.000 38.500,27.000 C52.061,27.000 49.945,15.648 46.510,11.367 C41.928,5.656 34.891,2.000 27.000,2.000 C13.193,2.000 2.000,13.193 2.000,27.000 C2.000,40.807 13.193,52.000 27.000,52.000 C40.807,52.000 52.000,40.807 52.000,27.000 C52.000,13.000 40.837,2.000 27.000,2.000 "></path>
+                        </svg>
+                    </label>
+                    <ul class="onglets">
+                        <li><a href="index.html">Accueil</a></li><!--
+                         --><li><a href="bio.html">Biographie</a></li><!--
+                        --><li><a href="galerie.html">Galerie</a></li><!--
+                        --><li><a href="biblio.html">Bibliographie</a></li><!--
+                        --><li><a href="liens.html">Liens</a></li><!--
+                        --><li><a href="pratique.html" class="active_menu">Pratique</a></li>
+                    </ul>
+                </nav>
+        </header>
+        <main>
+        <section class="pratique">
+            <div id='stael_expo'></div>
+            <div class="content">
+                <section class="info_data">
+                    <h3 role="heading" aria-level="3">Exposition Nicolas De Staël</h3>
+                    <p>
+                        Palais des Beaux-Arts<br />
+                        Rue Ravenstein 23<br />
+                        1000 - Bruxelles<br />
+                        Belgique<br />
+                    </p>
+                    <div class="center_table">
+                        <ul class="table table1">
+                            <li>
+                                Du 20 novembre 2015<br />
+                                Au 18 mars 2016
+                            </li>
+                            <li>
+                                De 10h à 18h
+                            </li>
+                            <li>Fermé le lundi</li>
+                        </ul>
+                        <ul class="table table2">
+                            <li><span>Adultes :</span> 4€</li>
+                            <li><span>Enfants :</span> 2€</li>
+                        </ul>
+                        <ul class="table table3">
+                            <li><a href="tel:+324767676">+32 4 767676</a></li>
+                            <li><a href="tel:+085123456">085 12 34 56</a></li>
+                        </ul>
+                    </div>
+                </section>
+                <section class="info_form" action="#">
+                    <h3 role="heading" aria-level="3">Demandez notre catalogue</h3>
+                    <form action="get">
+                        <label for="name">Nom</label>
+                        <input type="text" required id="name" class="info" tabindex="1">
+
+                        <label for="firstname">Prénom</label>
+                        <input type="text" required id="firstname" class="info" tabindex="2">
+
+                        <label for="mail">Adresse e-mail</label>
+                        <input type="email" required id="mail" class="info" tabindex="3">
+
+                        <label for="street">Nom de la rue</label>
+                        <input type="text" required id="street" class="info" tabindex="4">
+
+                        <div class="2cases1">
+                            <label for="nummer">Numéro</label>
+                            <input type="text" required id="nummer" class="info cp" tabindex="5">
+                        </div>
+                        <div class="2cases2">
+                            <label for="postalcode">Code Postal</label>
+                            <input type="text" required id="postalcode" class="info cp" tabindex="6">
+                        </div>
+
+                        <!--<input type="submit" value="Envoyer" tabindex="7">-->
+
+                        <div class="myButton">
+                            <button class="send">
+                                <div class="text">ENVOYER</div>
+                                <div class="loader"></div>
+                                <div class="done">Message envoyé</div>
+                            </button>
+                        </div>
+                        <p>
+                            Tous les champs sont obligatoires<br />
+                            Nous ne livrons qu'en Belgique
+                        </p>
+                    </form>
+
+
+
+                </section>
+            </div><!-- fin content -->
+        </section> <!-- fin pratique -->
+        </main>
+        <footer>
+            <span>
+                © <strong>Design</strong> by <em>Jimmy Letecheur</em>
+            </span>
+        </footer>
+        <script type="text/javascript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js"></script>
+        <script>
+            $(".send").on('click', function() {
+                $(".text").addClass("active");
+                $(".send").addClass("active");
+                $(".loader").addClass("active");
+                $(".send").delay(1700).queue(function() {
+                    $(this).addClass("finished").clearQueue();
+                });
+
+                $(".done").delay(1600).queue(function() {
+                    $(this).addClass("active").clearQueue();
+                });
+            })
+        </script>
+        <script src='https://maps.googleapis.com/maps/api/js?key=&sensor=false&extension=.js'></script>
+        <script>
+            google.maps.event.addDomListener(window, 'load', init);
+            var map;
+            function init() {
+                var mapOptions = {
+                    center: new google.maps.LatLng(50.848666,4.360742),
+                    zoom: 13,
+                    zoomControl: true,
+                    zoomControlOptions: {
+                        style: google.maps.ZoomControlStyle.DEFAULT,
+                    },
+                    disableDoubleClickZoom: true,
+                    mapTypeControl: false,
+                    mapTypeControlOptions: {
+                        style: google.maps.MapTypeControlStyle.HORIZONTAL_BAR,
+                    },
+                    scaleControl: true,
+                    scrollwheel: false,
+                    panControl: true,
+                    streetViewControl: true,
+                    draggable : false,
+                    overviewMapControl: true,
+                    overviewMapControlOptions: {
+                        opened: false,
+                    },
+                    mapTypeId: google.maps.MapTypeId.ROADMAP,
+                    styles: [{"featureType":"landscape","stylers":[{"saturation":-100},{"lightness":65},{"visibility":"on"}]},{"featureType":"poi","stylers":[{"saturation":-100},{"lightness":51},{"visibility":"simplified"}]},{"featureType":"road.highway","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"road.arterial","stylers":[{"saturation":-100},{"lightness":30},{"visibility":"on"}]},{"featureType":"road.local","stylers":[{"saturation":-100},{"lightness":40},{"visibility":"on"}]},{"featureType":"transit","stylers":[{"saturation":-100},{"visibility":"simplified"}]},{"featureType":"administrative.province","stylers":[{"visibility":"off"}]},{"featureType":"water","elementType":"labels","stylers":[{"visibility":"on"},{"lightness":-25},{"saturation":-100}]},{"featureType":"water","elementType":"geometry","stylers":[{"hue":"#ffff00"},{"lightness":-25},{"saturation":-97}]}],
+                }
+                var mapElement = document.getElementById('stael_expo');
+                var map = new google.maps.Map(mapElement, mapOptions);
+                var locations = [
+                    ['Exposition Nicolas De Staël', '', '', '', '', 50.8442226, 4.3595052000001, 'https://mapbuildr.com/assets/img/markers/default.png']
+                            ];
+                            for (i = 0; i < locations.length; i++) {
+                                if (locations[i][1] =='undefined'){ description ='';} else { description = locations[i][1];}
+                                if (locations[i][2] =='undefined'){ telephone ='';} else { telephone = locations[i][2];}
+                                if (locations[i][3] =='undefined'){ email ='';} else { email = locations[i][3];}
+                               if (locations[i][4] =='undefined'){ web ='';} else { web = locations[i][4];}
+                               if (locations[i][7] =='undefined'){ markericon ='';} else { markericon = locations[i][7];}
+                                marker = new google.maps.Marker({
+                                    icon: markericon,
+                                    position: new google.maps.LatLng(locations[i][5], locations[i][6]),
+                                    map: map,
+                                    title: locations[i][0],
+                                    desc: description,
+                                    tel: telephone,
+                                    email: email,
+                                    web: web
+                                });
+                    link = '';     }
+                    }
+        </script>
+    </body>
+</html>

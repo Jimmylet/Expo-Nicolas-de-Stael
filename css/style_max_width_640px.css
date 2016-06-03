@@ -1,0 +1,55 @@
+/*ARTISTE_PROJET_3
+* style de base_max width 730px
+* started at 15/11/15
+*/
+
+@import url(./components/nav_max_width_640px.css);
+
+/**************************************
+**************************************/
+
+
+blockquote{
+    width: 75%;
+    margin: 0 auto;
+}
+
+blockquote:after{ /* CLEAR FIX FOR BLOCKQUOTE SMALL */
+    content: "";
+    display: block;
+    clear: right;
+}
+
+/********************/
+/* BIOGRAPHIE */
+/********************/
+
+.wrapper_bibliographie p:nth-child(4),
+.wrapper_bibliographie p:nth-child(5),
+.wrapper_bibliographie p:nth-child(6),
+.wrapper_bibliographie p:nth-child(8),
+.wrapper_bibliographie p:nth-child(10){
+    position: inherit;
+    display: block;
+    max-width: inherit;
+    margin-left: inherit;
+    margin-right: inherit;
+    margin-top: inherit;
+  }
+
+  .wrapper_bibliographie p:nth-child(8),
+  .wrapper_bibliographie p:nth-child(10){
+    padding-right: 0rem;
+    margin-bottom: 5rem;
+  }
+
+.wrapper_bibliographie img:nth-child(3),
+.wrapper_bibliographie img:nth-child(9){
+    display: none;
+}
+
+/********************/
+/* FIN BIOGRAPHIE /*
+/********************/
+
+
